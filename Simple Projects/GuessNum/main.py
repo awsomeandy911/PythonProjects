@@ -39,5 +39,5 @@ def computerGuess(x):
             low = guess + 1
     print(f'Correct! The computer guessed the right number! {guess}, Good Job!!!')
 
-guess(10)
-computerGuess(10)
+guess(100)
+computerGuess(100)
