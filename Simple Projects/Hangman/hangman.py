@@ -17,5 +17,11 @@ def hangman():
     # letters in the word
     wordLetters = set(word)
     alphabet = set(string.ascii_uppercase)
-    # what user has guessed
-    usedLetters = set()
+    # what letters user has guessed
+    guessedLetters = set()
+    # get user input
+    userLetter = input("Guess a Letter: ").upper() # keeps input upper case
+    if userLetter in alphabet - guessedLetters:
+        guessedLetters.add(userLetter)
+        if userLetter in wordLetters:
+            wordLetters.remove(userLetter)
