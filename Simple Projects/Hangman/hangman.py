@@ -25,3 +25,11 @@ def hangman():
         guessedLetters.add(userLetter)
         if userLetter in wordLetters:
             wordLetters.remove(userLetter)
+    
+    elif userLetter in guessedLetters:
+        print("You literally just guessed that letter -_- Try again")
+    
+    else:
+        print("Invalid character, Try again")
+
+hangman()
