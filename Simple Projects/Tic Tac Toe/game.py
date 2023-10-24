@@ -23,3 +23,9 @@ class TicTacToe:
             if spot == ' ':
                 moves.append(i)
         return moves
+    
+    def play(game, xPlayer, oPlayer, printGame = True):
+        if printGame:
+            game.printBoardNumbers()
+
+        letter = ""
