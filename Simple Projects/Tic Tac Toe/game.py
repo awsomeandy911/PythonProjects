@@ -24,8 +24,23 @@ class TicTacToe:
                 moves.append(i)
         return moves
     
-    def play(game, xPlayer, oPlayer, printGame = True):
-        if printGame:
-            game.printBoardNumbers()
+    def emptySquares(self):
+        return " " in self.board
+    
+    def numEmptySquares(self):
+        return self.bnoard.count(" ")
+    
+    def getMove(self):
+        
 
-        letter = ""
+def play(game, xPlayer, oPlayer, printGame = True):
+    if printGame:
+        game.printBoardNumbers()
+
+    letter = "X" # starting letter
+    # iterate while the game still has empty squares
+    # don't worry about winner bc once found then loop is broken
+    while game.emptySquares():
+        # get the move from the appropriate player
+        if letter == "O":
+            square = oPlayer.getMove
