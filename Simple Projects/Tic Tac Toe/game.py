@@ -30,7 +30,14 @@ class TicTacToe:
     def numEmptySquares(self):
         return self.bnoard.count(" ")
     
-    def getMove(self):
+    def makeMove(self, square, letter):
+        # if valid move, then make the move (assign square to letter)
+        # then return true, if invalid, return false
+        if self.board[square] == " ":
+            self.board[square] = letter
+            return True
+        else:
+            return False
         
 
 def play(game, xPlayer, oPlayer, printGame = True):
