@@ -50,4 +50,16 @@ def play(game, xPlayer, oPlayer, printGame = True):
     while game.emptySquares():
         # get the move from the appropriate player
         if letter == "O":
-            square = oPlayer.getMove
+            square = oPlayer.getMove(game)
+        else:
+            square = xPlayer.getMove(game)
+        
+        # define function to make a move
+        if game.makeMove(square, letter):
+            if printGame:
+                print(letter + f" makes a move to square {square}")
+                game.printBoard()
+                print(" ") #prints empty line
+
+            # after we made our move, we need to alternate letters
+            letter = "O" if letter == "X" else "X" # switches players
